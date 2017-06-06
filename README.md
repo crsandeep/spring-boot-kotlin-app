@@ -89,6 +89,52 @@ Start the application from `HelloApplication` class and load `http://localhost:8
 Hello string!
 ```
 
+## Service
+
+Let's add a service and wire it into our controller / JAX-RS endpoint.
+
+### Add a service class
+
+**Spring MVC and JAX-RS**
+
+```
+@Service
+class HelloService {
+    fun getHello() = "Hello service!"
+}
+```
+
+### Add a new REST endpoint
+
+**Spring MVC**
+
+```
+@Autowired
+lateinit var helloService: HelloService
+
+@GetMapping("/service")
+fun helloService() = helloService.getHello()
+```
+
+**JAX-RS**
+
+```
+@Autowired
+lateinit var helloService: HelloService
+
+@GET
+@Path("/service")
+fun helloService() = helloService.getHello()
+```
+
+### Restart the application
+    
+Restart the application from `HelloApplication` class and load `http://localhost:8080/hello/service`
+
+```
+Hello service!
+```
+
 ## Data class
 
 Let's add a data object to return in our controller / JAX-RS endpoint.
@@ -148,52 +194,6 @@ Restart the application from `HelloApplication` class and load `http://localhost
 {
     "message":"Hello data!"
 }
-```
-
-## Service
-
-Let's add a service and wire it into our controller / JAX-RS endpoint.
-
-### Add a service class
-
-**Spring MVC and JAX-RS**
-
-```
-@Service
-class HelloService {
-    fun getHello() = "Hello service!"
-}
-```
-
-### Add a new REST endpoint
-
-**Spring MVC**
-
-```
-@Autowired
-lateinit var helloService: HelloService
-
-@GetMapping("/service")
-fun helloService() = helloService.getHello()
-```
-
-**JAX-RS**
-
-```
-@Autowired
-lateinit var helloService: HelloService
-
-@GET
-@Path("/service")
-fun helloService() = helloService.getHello()
-```
-
-### Restart the application
-    
-Restart the application from `HelloApplication` class and load `http://localhost:8080/hello/service`
-
-```
-Hello service!
 ```
 
 ## Integration test
