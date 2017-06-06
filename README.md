@@ -1,7 +1,7 @@
 # spring-boot-kotlin-app
 
 
-In this guide, we will be building a Kotlin RESTful web services using Spring boot and Spring MVC / JAX-RS. Instructions are provided to use either Spring MVC or JAX-RS. We will be adding unit tests and integration tests.
+In this guide, we will be building a Kotlin RESTful web services using Spring Boot and Spring MVC / JAX-RS. Instructions are provided to use either Spring MVC or JAX-RS. We will be adding unit tests and integration tests as well. This guide assumes you have a basic knowledge of [Kotlin](https://kotlinlang.org/), [Spring Boot](https://projects.spring.io/spring-boot/) and [Maven](https://maven.apache.org/).
 
 _Note: Maven is used in the uploaded source code but instructions are provided to use Gradle instead of Maven._
 
