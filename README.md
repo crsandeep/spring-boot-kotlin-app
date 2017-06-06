@@ -1,4 +1,4 @@
-# Building and Testing RESTful Web Services using Kotlin, Spring boot and Spring MVC/JAX-RS
+# spring-boot-kotlin-app
 
 ## Goal
 
