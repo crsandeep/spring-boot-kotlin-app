@@ -2,7 +2,9 @@
 
 ## Goal
 
-In this guide, we will be building a Kotlin RESTful web services using Spring boot and Spring MVC/JAX-RS. We will be adding unit tests and integration tests.
+In this guide, we will be building a Kotlin RESTful web services using Spring boot and Spring MVC / JAX-RS. Instructions are provided to use either Spring MVC or JAX-RS. We will be adding unit tests and integration tests.
+
+_Note: I have used Maven in the uploaded source code but I have provided instructions to use Gradle instead of Maven._
 
 ## Setup
 
@@ -300,3 +302,8 @@ class HelloResourceUnitTest {
     }
 }
 ```
+
+## References
+
+* http://www.baeldung.com/spring-boot-kotlin
+* https://dzone.com/articles/using-jax-rs-with-spring-boot-instead-of-mvc
